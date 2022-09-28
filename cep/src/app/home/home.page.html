@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      CEP
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+
+  <ion-title> </ion-title>
+
+  <ion-item>
+  <ion-label position="floating">Digite o CEP</ion-label>
+    <ion-input [(ngModel)]="cep"></ion-input>
+  </ion-item>
+  <ion-button expand="block" (click)="local()" color="dark">Verificar</ion-button> <br><br>
+
+  <ion-list lines="none">
+
+    <ion-item>
+      <ion-label>Rua: {{dados.logradouro}}</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Bairro: {{dados.bairro}}</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Cidade: {{dados.localidade}}</ion-label>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Estado: {{dados.uf}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
